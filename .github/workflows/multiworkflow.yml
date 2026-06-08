@@ -13,3 +13,12 @@ jobs:
        echo "hello first world"
        echo "hello first time again"
   
+  second-workflow:
+   runs-on: ubuntu-latest
+   needs: [first-workflow]
+
+   steps:
+    - name: second steps
+      run: |
+       echo "hello second world"
+       echo "hello second time again"
